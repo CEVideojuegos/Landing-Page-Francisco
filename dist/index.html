@@ -268,7 +268,7 @@
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Diseño de nivel:</h4>
-                            <p class="text-black-50 mb-0">Aqui mostramos lo que seria un prototipo de dos zonas conectadas entre sí.</p>
+                            <p class="text-black-50 mb-0">Aqui mostramos lo que seria un prototipo de dos zonas conectadas entre sí. No es muy bonito, pero es lo que hay.</p>
                         </div>
                     </div>
                 </div>
@@ -300,7 +300,7 @@
                             <!-- Email address input-->
                             <div class="row input-group-newsletter">
                                 <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
+                                <div class="col-auto"><button onclick="gtag('event','click',{'event_category': 'button', 'event_label' : 'subscription_button'})" class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
                             </div>
                             <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
                             <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
@@ -422,6 +422,17 @@
   const analytics = getAnalytics(app);
 
 </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JE3TEW9605"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JE3TEW9605');
+</script>
+
     </body>
 
 </html>
